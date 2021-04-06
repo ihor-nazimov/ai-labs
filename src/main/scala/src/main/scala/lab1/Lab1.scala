@@ -13,8 +13,6 @@ object Lab1 extends App {
   println("\nPath:\n" + keyString(Node.startKey))
   path match {
     case Some(path) => path.foreach( node => {
-//      println(node.cameFrom.get)
-//      println(node)
       if (node.boatPosition == Node.BOAT_ON_RIGHT) {
         val boat = keyString(node.cameFrom.get.key -- node.key)
         val leftBank = keyString(node.key)
