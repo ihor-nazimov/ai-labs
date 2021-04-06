@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25b3d98f-a154-476e-87d6-b4e66755af6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/AStarPathFinder.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Node.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/KnightsAndBearersNode.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Lab1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Lab1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Search.scala" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Lab1.scala</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
