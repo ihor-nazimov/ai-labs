@@ -2,8 +2,17 @@ package com.pin.ailabs
 package src.main.scala.lab1
 
 /** Perform knights and their armor-bearers using A* alhorithm
+ *  Search
+ *
+ *
+ *
+ *
+ *    set of knights (X) and armor-bearers (x) as Set of Char
+ *    -
+ *
  *
  */
+
 object Lab1 extends App {
   def printSets(set: Set[Set[Char]]): Unit =
     set.foreach(x => println(x.toList.sorted))
