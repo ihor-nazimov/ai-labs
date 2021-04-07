@@ -1,7 +1,7 @@
 package com.pin.ailabs
 package src.main.scala.lab1
 
-import com.pin.ailabs.src.main.scala.lab1.Node.BOAT_ON_LEFT
+import src.main.scala.lab1.Node.BOAT_ON_LEFT
 
 import scala.collection.mutable
 
@@ -26,7 +26,6 @@ object Node {
       (node.key == key) & (node.boatPosition == boatPosition)
     })
   }
-
 }
 
 /**State of left-side bank from knights-bearers puzzle
@@ -40,7 +39,8 @@ class Node(val key : Set[Char], var gScore: Long, val boatPosition: Boolean) {
   var cameFrom: Option[Node] = _
 
   /** @return true if node is final (nobody on left-side bank)  */
-  def isFinal: Boolean = key.isEmpty
+  def isFinal: Boolean =
+    (boatPosition == Node.BOAT_ON_RIGHT) & key.isEmpty
 
   /**
    * @return tuple of ( set of visited nodes, set of new nodes)
@@ -53,19 +53,20 @@ class Node(val key : Set[Char], var gScore: Long, val boatPosition: Boolean) {
     val fromKey = if (boatPosition == BOAT_ON_LEFT) key else differKey
     val toKey = if (boatPosition == BOAT_ON_LEFT) differKey else key
 
-    val boatSet = (fromKey.subsets(1) ++ fromKey.subsets(2) ++ fromKey.subsets(3))
-        .filter(k => (
-          Node.validKeys.contains(k) //boat must be valid too
-          & Node.validKeys.contains(toKey ++ k)
-          & Node.validKeys.contains(fromKey -- k) //next banks must be valid
-        )).toSet
+    val boatKeySet = (fromKey.subsets(1) ++ fromKey.subsets(2) ++ fromKey.subsets(3))
+        .filter(k =>
+          Node.validKeys.contains(k) & //boat must be valid too
+          Node.validKeys.contains(toKey ++ k) &
+          Node.validKeys.contains(fromKey -- k) //next banks must be valid
+        ).toSet
 
-    boatSet.foreach(k =>
-      Node.findNode(openSet, k, boatPosition) match {
-        case None => visitedAndNewNodes._2 += new Node(k, gScore + 1, !boatPosition) //distance = 1
-        case node => visitedAndNewNodes._1 += node.get
+    boatKeySet.foreach(boatKey => {
+      val neighbourKey = if (boatPosition == Node.BOAT_ON_LEFT) key -- boatKey else key ++ boatKey
+      Node.findNode(openSet, neighbourKey, !boatPosition) match {
+        case None => visitedAndNewNodes._2 += new Node(neighbourKey, Long.MaxValue, !boatPosition) //distance = 1
+        case neighbourNode => visitedAndNewNodes._1 += neighbourNode.get
       }
-    )
+    })
 
     visitedAndNewNodes
 
@@ -101,7 +102,9 @@ class Node(val key : Set[Char], var gScore: Long, val boatPosition: Boolean) {
   }
 
   @Override
-  def toString: String {
+  override def toString: String = {
+//    s"${key.toList.sorted.mkString} boat=$boatPosition gScore=$gScore fScore=${fScore} isFinal=${isFinal}"
+//    s"${key.toList.sorted.mkString}${if (boatPosition) "<-" else "->"}"
     key.toList.sorted.mkString
   }
 }
