@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4628e20-d78c-476d-bf12-c2c367caa5f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/AStarPathFinder.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Node.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/KnightsAndBearersNode.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/AStarPathFinder.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/AStarPathFinder.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Lab1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Lab1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Search.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Node.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/src/main/scala/lab1/Node.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617743065654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="temporary2">
+      <created>1617745874869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617745874869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +143,7 @@
     </ignored-roots>
     <MESSAGE value="Initial" />
     <MESSAGE value="Search and Node classes completed. Before testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search and Node classes completed. Before testing" />
+    <MESSAGE value="temporary2" />
+    <option name="LAST_COMMIT_MESSAGE" value="temporary2" />
   </component>
 </project>
